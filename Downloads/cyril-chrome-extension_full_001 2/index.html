@@ -1,0 +1,199 @@
+<html>
+<head>
+	<title>Алдаагүй бичицгээе...!</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:type"               content="tool" />
+	<meta property="og:title"              content="Алдаагүй бичицгээе...!" />
+	<meta property="og:description"        content="Энэхүү хэрэглүүр нь хурдан бөгөөд алдаагүй бичихэд туслах болно." />
+	<meta property="og:image"              content="demo.jpg" />
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="bootstrap/css/sticky-footer-navbar.css">
+	<link rel="stylesheet" href="bootstrap/css/override.css">
+	<style type="text/css">
+		html, body{
+			width: 500px;
+			max-height: 300px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="jumbotron">
+			<h2 class="display-3">Алдаагүй бичицгээе...!</h2>
+			<p class="lead">Энэхүү хэрэглүүр нь хурдан бөгөөд алдаагүй бичихэд туслах болно. </p>
+			
+			<hr class="my-4">
+			<div class="row justify-content-md-center">
+				
+				<div class="col-md-2 col-xs-3">
+					<div class="input-group border-stroke">
+						<div class="input-group-addon">
+							<span class="glyphicon glyphicon-globe border-stroke"></span>
+						</div>
+						<select class="form-control border-stroke opt-selector" id="selector-on-off">
+							<option>On</option>
+							<option>Off</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="col-md-2 col-xs-5">
+					<div class="input-group border-stroke">
+						<div class="input-group-addon">
+							<span class="glyphicon glyphicon-globe border-stroke"></span>
+						</div>
+						<select class="form-control border-stroke opt-selector" id="selector-language">
+							<option value="mon">Монгол</option>
+							<option value="eng">English</option>
+						</select>
+					</div>
+				</div>		
+				<div class="col-md-2 col-xs-3">		
+					<div class="input-group border-stroke">
+						<div class="input-group-addon">
+							<span class="glyphicon glyphicon-text-height border-stroke"></span>
+						</div>
+						<select class="form-control border-stroke opt-selector" id="selector-font-size">
+							<option>14</option>
+							<option>18</option>
+							<option>22</option>
+							<option>24</option>
+						</select>
+					</div>
+				</div>
+			</div>	
+			<div class="row justify-content-md-center">		
+				<div id="cyrillic-input-area-container" class="form-group col-8">
+					<textarea id="cyrillic-input-area" class="form-control noresize" placeholder="Алдаагүй бичицгээе..."></textarea>
+				</div>
+			</div>	
+			<div class="row justify-content-md-center">	
+				<div class="col-md-3 border-stroke">
+					<div class="btn-group" role="group" aria-label="First group">
+						<button type="button button-large" class="btn btn-default btn-md" id="selector-eraser">
+							<span class="glyphicon glyphicon-erase"></span>
+							<span class="border-stroke">Арилгах</span>
+						</button>
+					</div>
+					<div class="btn-group" role="group" aria-label="First group">
+						<button type="button button-large" class="btn btn-default btn-md" id="selector-tooltip">
+							<span class="glyphicon glyphicon-cog"></span>
+							<span class="border-stroke">Заавар</span>
+						</button>
+					</div>
+					<div class="btn-group" role="group" aria-label="First group">
+						<button type="button button-large" class="btn btn-default btn-md" id="selector-table">
+							<span class="glyphicon glyphicon-list"></span>
+							<span class="border-stroke">Галиг</span>
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="row justify-content-md-center">	
+				<div id="container-tooltip" class="thumbnail hidden">
+					<span>Мэдээний сайтууд дээр түгээмэл хэрэглэгдэж буй үгсээр үгсийн сангаа бүрдүүлсэн тул алдаатай үг байх магадлалтай тул мэйл бичээрэй.</br> 
+					Tab болон Enter товчлуурыг даран автоматаар үгээ гүйцээх боломжтой.</br> 
+Түүнчлэн сонголтуудаас хулганаар болон дээш/доош сумтай товчлуураар сонголтоо хийж Tab болон Enter товчлуураа дарж бас болно.</br>
+Монгол<>Англи шилжилтийг Control + Alt товчлуурын хослолоор солих боломжтой.</span></br>
+					<span> Санал хүсэлт: <a href="mailto:bilgeesys@gmail.com">bilgeesys@gmail.com</a></span>  
+				</div>	
+				<div id="container-table" class="thumbnail hidden">
+					<h2>Галиг хүснэгт</h2>
+					<table class="table table-bordered">	
+						<tbody>
+							<tr>
+						  		<td class="success">А а  </td>
+								<td>A a  </td>
+								<td class="success">Б б  </td>
+								<td>B b  </td>
+								<td class="success">В в  </td>
+								<td>V v  </td>
+								<td class="success">Г г  </td>
+								<td>G g  </td>
+								<td class="success">Д д  </td>
+								<td>D d  </td>
+								<td class="success">Е е  </td>
+								<td>Ye ye</td>
+							</tr>
+							<tr>
+								<td class="success">Ё ё  </td>
+								<td>Yo yo</td>
+		  						<td class="success">Ж ж  </td>
+								<td>J j  </td>
+								<td class="success">З з  </td>
+								<td>Z z  </td>
+								<td class="success">И и  </td>
+								<td>I i  </td>
+								<td class="success">Й й  </td>
+								<td>I i  </td>
+								<td class="success">К к  </td>
+								<td>K k  </td>
+							</tr>
+							<tr>
+								<td class="success">Л л  </td>
+								<td>L l  </td>
+								<td class="success">М м  </td>
+								<td>M m  </td>
+								<td class="success">Н н  </td>
+								<td>N n  </td>
+								<td class="success">О о  </td>
+								<td>O o  </td>
+								<td class="success">Ө ө  </td>
+								<td>Q q  </td>
+								<td class="success">П п  </td>
+								<td>P p  </td>
+							</tr>
+							<tr>
+								<td class="success">Р р  </td>
+								<td>R r  </td>
+								<td class="success">С с  </td>
+								<td>S s  </td>
+								<td class="success">Т т  </td>
+								<td>T t  </td>
+								<td class="success">У у  </td>
+								<td>U u  </td>
+								<td class="success">Ү ү  </td>
+								<td>W w  </td>
+								<td class="success">Ф ф  </td>
+								<td>F f  </td>
+							</tr>
+							<tr>
+								<td class="success">Х х  </td>
+								<td>H h  </td>
+								<td class="success">Ц ц  </td>
+								<td>C c  </td>
+								<td class="success">Ч ч  </td>
+								<td>Ch ch</td>
+								<td class="success">Ш ш  </td>
+								<td>Sh sh</td>
+								<td class="success">Щ щ  </td>
+								<td>X x  </td>
+								<td class="success">Ъ ъ  </td>
+								<td>""  "</td>
+							</tr>
+							<tr>
+								<td class="success">Ы ы  </td>
+								<td>Y y  </td>
+								<td class="success">Ь ь  </td>
+								<td>''  '</td>
+								<td class="success">Э э  </td>
+								<td>E e  </td>
+								<td class="success">Ю ю  </td>
+								<td>Yu yu</td>
+								<td class="success">Я я  </td>
+								<td>Ya ya</td>
+								<td></td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="caret.min.js"></script>
+	<script type="text/javascript" src="cyril.js"></script>
+</body>
+</html>
